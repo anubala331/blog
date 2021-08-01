@@ -4,7 +4,7 @@ var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 
-var homeRouter = require('./routes/home');
+var homeRouter = require('./routes');
 
 var app = express();
 
@@ -20,6 +20,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', homeRouter);
 app.use('/home', homeRouter);
+app.use('/about-me', homeRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
@@ -36,5 +37,12 @@ app.use(function(err, req, res, next) {
   res.status(err.status || 500);
   res.render('error');
 });
+
+app.locals.initials = 'PMurria', 
+app.locals.tab_home = 'Home',
+app.locals.tab_skills = 'Skills',
+app.locals.tab_projects = 'Projects',
+app.locals.tab_contact = 'Contact Me',
+app.locals.tab_about = 'About Me',
 
 module.exports = app;
