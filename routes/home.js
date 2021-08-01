@@ -70,7 +70,15 @@ router.get('/', function(req, res, next) {
     phone: 'Phone',
     company: 'Company',
     message: 'Message',
-    contact_form_btn: 'Send'
+    contact_form_btn: 'Send',
+
+    social_fb_url: 'https://www.facebook.com/Pprike',
+    soical_twitter_url: 'https://twitter.com/ParikshitMurria',
+    social_linkedin_url: 'https://www.linkedin.com/in/pmurria/',
+    social_instagram_url: 'https://www.instagram.com/pprike/',
+    social_github_url: 'https://github.com/priked'
+
+
 
 
 
