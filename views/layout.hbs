@@ -1,12 +1,67 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>{{title}}</title>
-    <link rel='stylesheet' href='/stylesheets/bootstrap.min.css' />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
-  </head>
-  <body class="pt-100">
-    {{{body}}}
-  </body>
+<head>
+  <title>{{title}}</title>
+  <link rel='stylesheet' href='/stylesheets/bootstrap.min.css' />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-lg fixed-top navbar-dark bg-primary">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">{{initials}}</a>
+
+      <div class="collapse navbar-collapse">
+        <ul class="navbar-nav me-auto">
+
+          <li class="nav-item">
+            <a class="nav-link" href="home">{{tab_home}} </a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="home#skills">{{tab_skills}}</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="home#projects">{{tab_projects}}</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="home#contact-me">{{tab_contact}}</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="/about-me">{{tab_about}}</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  {{{body}}}
+
+  <footer class="bg-light text-center text-white">
+    <div class="text-center p-3" style="background-color: black;">
+      © 2021 Copyright
+      <div class="container d-flex flex-row justify-content-center">
+        <div class="d-flex flex-row justify-content-evenly w-25">
+          <a class="btn btn-primary my-1" style="background-color: #3b5998;" target="_blank" href="{{social_fb_url}}"><i
+              class="fa fa-facebook"></i></a>
+          <a class="btn btn-primary my-1" style="background-color: #55ACEE;" target="_blank"
+            href="{{soical_twitter_url}}"><i class="fa fa-twitter"></i></a>
+          <a class="btn btn-primary my-1" style="background-color: #ac2bac;" target="_blank"
+            href="{{social_instagram_url}}"><i class="fa fa-instagram"></i></a>
+          <a class="btn btn-primary my-1" style="background-color: #0082ca;" target="_blank"
+            href="{{social_linkedin_url}}"><i class="fa fa-linkedin"></i></a>
+          <a class="btn btn-primary my-1" style="background-color: #333333;" target="_blank"
+            href="{{social_github_url}}"><i class="fa fa-github"></i></a>
+        </div>
+      </div>
+
+      <a class="text-white" href="{{potfolio_link}}">Pmurria Portfolio</a>
+    </div>
+  </footer>
+</body>
+
 </html>
