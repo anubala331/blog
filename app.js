@@ -1,9 +1,11 @@
+// importing modules
 var createError = require('http-errors');
 var express = require('express');
 var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 
+//Controller
 var homeRouter = require('./routes');
 
 var app = express();
@@ -18,6 +20,7 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
+//define path for controller
 app.use('/', homeRouter);
 app.use('/home', homeRouter);
 app.use('/about-me', homeRouter);
@@ -38,11 +41,14 @@ app.use(function(err, req, res, next) {
   res.render('error');
 });
 
+//Declaring locals to app.
+app.locals.title = 'PMurria Portfolio',
 app.locals.initials = 'PMurria', 
 app.locals.tab_home = 'Home',
 app.locals.tab_skills = 'Skills',
 app.locals.tab_projects = 'Projects',
 app.locals.tab_contact = 'Contact Me',
-app.locals.tab_about = 'About Me',
+app.locals.tab_about = 'About Me'
 
+//making app public
 module.exports = app;

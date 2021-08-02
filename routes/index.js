@@ -1,6 +1,7 @@
 var express = require('express');
 var router = express.Router();
 
+// Mapping for root pages
 router.get('/', function(req, res, next) {
   res.render('home', { 
     my_heading: 'I am Parikshit Murria',
@@ -74,6 +75,7 @@ router.get('/', function(req, res, next) {
   });
 });
 
+// Mapping for about me
 router.get('/about-me', function(req, res, next) {
   res.render('about-me', { 
     initials: 'PMurria',
@@ -82,7 +84,7 @@ router.get('/about-me', function(req, res, next) {
     tab_projects: 'Projects',
     tab_contact: 'Contact Me',
     tab_about: 'About Me',
-    about_me_content: 'An Accomplished Web Application Developer with 7+ years of experience specializing in Backend development. Aclear understanding of REST-based Micro-service architecture. Understanding of MVC Architecture and DesignPatterns.<br><br>Hands-on Experience in database systems. Worked Extensively on Amazon Web Services. Proficient with Datastructures and algorithms. Worked in SCRUM Agile development environment.<br><br>An Enterprise Champion, technically sophisticated, presentable, good orator, team leader & a solutions expertwith documented strength in building sustainable executive relations at the client-side.<br>An Engaging communicator skilled in building trust & relationships. An Impassioned leader who mentors with apurpose & understands that strong working relationships create great teams and produce exceptional results</p>',
+    about_me_content: 'An Accomplished Web Application Developer with 7+ years of experience specializing in Backend development. A clear understanding of REST-based Micro-service architecture. Understanding of MVC Architecture and DesignPatterns.<br><br>Hands-on Experience in database systems. Worked Extensively on Amazon Web Services. Proficient with Datastructures and algorithms. Worked in SCRUM Agile development environment.<br><br>An Enterprise Champion, technically sophisticated, presentable, good orator, team leader & a solutions expertwith documented strength in building sustainable executive relations at the client-side.<br>An Engaging communicator skilled in building trust & relationships. An Impassioned leader who mentors with apurpose & understands that strong working relationships create great teams and produce exceptional results</p>',
   });
 });
 
