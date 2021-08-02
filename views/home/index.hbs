@@ -1,3 +1,5 @@
+{{!-- Main content --}}
+{{!-- using flex --}}
 <div id="home" class="container-fluid bg-primary min-vh-100 d-flex justify-content-center">
   <div class="d-flex flex-row align-items-center">
       <div class="flex-column d-flex px-3">
@@ -12,6 +14,7 @@
         <p class="fw-bold fs-5 text-dark">{{my_designation}}</p>
       </div>
 
+    {{!-- Social media buttons --}}
     <div class="d-flex flex-column justify-content-evenly px-3">
       <a class="btn btn-primary my-1" style="background-color: #3b5998;" target="_blank" href="{{social_fb_url}}"><i class="fa fa-facebook"></i></a>
          <a class="btn btn-primary my-1" style="background-color: #55ACEE;"target="_blank" href="{{soical_twitter_url}}"><i class="fa fa-twitter"></i></a>
@@ -22,8 +25,11 @@
   </div>
 </div>
 
+
+{{!-- My Skills --}}
 <div id="skills" class="container pt-5">
   <p class="fw-bold fs-3 text">{{my_skills}}</p>
+  {{!-- py : padding on y axis top and bottom --}}
   <div class="py-2">
     <div class="p-2 border border-success">
       <p class="fw-bold fs-5 text">{{java}} </p>
@@ -33,7 +39,6 @@
       </div>
     </div>
   </div>
-
   <div class="py-2">
     <div class="p-2 border border-info">
       <p class="fw-bold fs-5 text">{{mobile_dev}}</p>
@@ -63,13 +68,14 @@
   </div>
 </div>
 
+{{!-- Work Experience --}}
 <div class="container pt-5">
   <p class="fw-bold fs-3 text">{{work_ex}}</p>
 
   <div class="row">
     <div class="col">
       <div class="card" style="width: 18rem;">
-        <img src="/images/expedia_logo.png" class="card-img-top" style="height: 140px;" alt="">
+        <img src="/images/expedia_logo.png" class="card-img-top" style="height: 140px;" alt="expedia_logo">
         <div class="card-body">
           <h5 class="card-title fw-bold">{{expedia}}</h5>
           <p class="card-text">
@@ -85,7 +91,7 @@
 
     <div class="col">
       <div class="card" style="width: 18rem;">
-        <img src="/images/calient_logo.png" class="card-img-top" style="height: 140px;" alt="">
+        <img src="/images/calient_logo.png" class="card-img-top" style="height: 140px;" alt="calient_logo">
         <div class="card-body">
           <h5 class="card-title fw-bold">{{calient}}</h5>
           <p class="card-text">
@@ -101,7 +107,7 @@
 
     <div class="col">
       <div class="card" style="width: 18rem;">
-        <img src="/images/hp_logo.jpeg" class="card-img-top" style="height: 140px;" alt="">
+        <img src="/images/hp_logo.jpeg" class="card-img-top" style="height: 140px;" alt="hp_logo">
         <div class="card-body">
           <h5 class="card-title fw-bold">{{hp}}</h5>
           <p class="card-text">
@@ -117,7 +123,7 @@
 
     <div class="col">
       <div class="card" style="width: 18rem;">
-        <img src="/images/seasia_logo.jpeg" class="card-img-top" style="height: 140px;" alt="">
+        <img src="/images/seasia_logo.jpeg" class="card-img-top" style="height: 140px;" alt="seasia_logo">
         <div class="card-body">
           <h5 class="card-title fw-bold">{{seasia}}</h5>
          <p class="card-text">
@@ -187,6 +193,7 @@
           <div class="card-body">
             <h5 class="card-title">{{sapp}}</h5>
             <p class="card-text">
+              {{!-- Render html using triple moustaches --}}
               {{{sapp_details}}}
             </p>
           </div>
@@ -196,6 +203,7 @@
   </div>
 </div>
 
+{{!-- Contact form using form control--}}
 <div id="contact-me" class="container pt-4">
   <p class="fw-bold fs-3 text">{{tab_contact}}</p>
   <div class="pb-4 col-8">
@@ -233,6 +241,5 @@
         <button type="submit" class="btn btn-primary">{{contact_form_btn}}</button>
     </div>
     </form>
-
   </div>
 </div>
