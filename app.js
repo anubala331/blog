@@ -24,7 +24,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/', homeRouter);
 app.use('/home', homeRouter);
 app.use('/about-me', homeRouter);
-
+app.use('/blog', homeRouter);
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
   next(createError(404));
@@ -42,13 +42,13 @@ app.use(function(err, req, res, next) {
 });
 
 //Declaring locals to app.
-app.locals.title = 'PMurria Portfolio',
-app.locals.initials = 'PMurria', 
+app.locals.title = 'ABala Portfolio',
+//app.locals.initials = 'Bala', 
 app.locals.tab_home = 'Home',
 app.locals.tab_skills = 'Skills',
 app.locals.tab_projects = 'Projects',
 app.locals.tab_contact = 'Contact Me',
 app.locals.tab_about = 'About Me'
-
+app.locals.tab_blog = 'Blog'
 //making app public
 module.exports = app;

@@ -3,15 +3,15 @@
 <div id="home" class="container-fluid bg-primary min-vh-100 d-flex justify-content-center">
   <div class="d-flex flex-row align-items-center">
       <div class="flex-column d-flex px-3">
-        <img src="/images/main_img.jpeg" alt="Thats someone cool" style="width:300px;height:300px; border-radius: 30%;">
-      </div>
+        <img src="/images/profile.png" alt="Thats someone cool" style="width:300px;height:300px; border-radius: 30%;">
+          </div>
 
       <div class="d-flex flex-column justify-content-evenly px-3">
         <p class="fw-bold fs-3 text text-white ">{{my_heading}}
           <br>
           {{my_role}}
         </p>
-        <p class="fw-bold fs-5 text-dark">{{my_designation}}</p>
+        <p class="fw-bold fs-6 text-dark">{{{my_designation}}}</p>
       </div>
 
     {{!-- Social media buttons --}}
@@ -32,7 +32,7 @@
   {{!-- py : padding on y axis top and bottom --}}
   <div class="py-2">
     <div class="p-2 border border-success">
-      <p class="fw-bold fs-5 text">{{java}} </p>
+      <p class="fw-bold fs-5 text">{{CSTL}} </p>
       <div class="progress">
         <div class="progress-bar bg-success" role="progressbar" style="width: 90%;" aria-valuenow="90" aria-valuemin="0"
           aria-valuemax="100"></div>
@@ -41,7 +41,7 @@
   </div>
   <div class="py-2">
     <div class="p-2 border border-info">
-      <p class="fw-bold fs-5 text">{{mobile_dev}}</p>
+      <p class="fw-bold fs-5 text">{{postgres}}</p>
       <div class="progress">
         <div class="progress-bar bg-info" role="progressbar" style="width: 80%;" aria-valuenow="80" aria-valuemin="0"
           aria-valuemax="100"></div>
@@ -59,9 +59,9 @@
   </div>
   <div class="py-2">
     <div class="p-2 border border-danger">
-      <p class="fw-bold fs-5 text">{{agile}}</p>
+      <p class="fw-bold fs-5 text">{{mobile_app}}</p>
       <div class="progress">
-        <div class="progress-bar bg-danger" role="progressbar" style="width: 95%;" aria-valuenow="95" aria-valuemin="0"
+        <div class="progress-bar bg-danger" role="progressbar" style="width: 60%;" aria-valuenow="60" aria-valuemin="0"
           aria-valuemax="100"></div>
       </div>
     </div>
@@ -70,19 +70,27 @@
 
 {{!-- Work Experience --}}
 <div class="container pt-5">
-  <p class="fw-bold fs-3 text">{{work_ex}}</p>
+   <div class="row">
+    <div class="col">
+  <p class="fw-bold text-center fs-3 text">{{work_ex}}</p>
+  </div>
+ 
+    <div class="col">
+  <p class="fw-bold text-center fs-3 text">{{Certifications}}</p>
+  </div>
+  </div>
 
   <div class="row">
     <div class="col">
       <div class="card" style="width: 18rem;">
-        <img src="/images/expedia_logo.png" class="card-img-top" style="height: 140px;" alt="expedia_logo">
+        <img src="/images/HCL.png" class="card-img-top" style="height: 140px;" alt="hcl_logo">
         <div class="card-body">
-          <h5 class="card-title fw-bold">{{expedia}}</h5>
+          <h5 class="card-title fw-bold">{{hcl}}</h5>
           <p class="card-text">
             <ul>
-              <li><b>{{expedia_dates}}</b></li>
-              <li><b>{{expedia_role}}</b></li>
-              <li><b>{{expedia_location}}</b></li>
+              <li><b>{{hcl_dates}}</b></li>
+              <li><b>{{hcl_role}}</b></li>
+              <li><b>{{hcl_location}}</b></li>
             </ul>
           </p>
         </div>
@@ -91,14 +99,14 @@
 
     <div class="col">
       <div class="card" style="width: 18rem;">
-        <img src="/images/calient_logo.png" class="card-img-top" style="height: 140px;" alt="calient_logo">
+        <img src="/images/avissol.png" class="card-img-top" style="height: 140px;" alt="avissol">
         <div class="card-body">
-          <h5 class="card-title fw-bold">{{calient}}</h5>
+          <h5 class="card-title fw-bold">{{avissol}}</h5>
           <p class="card-text">
             <ul>
-              <li><b>{{calient_dates}}</b></li>
-              <li><b>{{calient_role}}</b></li>
-              <li><b>{{calient_location}}</b></li>
+              <li><b>{{avissol_dates}}</b></li>
+              <li><b>{{avissol_role}}</b></li>
+              <li><b>{{avissol_location}}</b></li>
             </ul>
           </p>
         </div>
@@ -107,14 +115,14 @@
 
     <div class="col">
       <div class="card" style="width: 18rem;">
-        <img src="/images/hp_logo.jpeg" class="card-img-top" style="height: 140px;" alt="hp_logo">
+        <img src="/images/emblogic.png" class="card-img-top" style="height: 140px;" alt="emblogic_logo">
         <div class="card-body">
-          <h5 class="card-title fw-bold">{{hp}}</h5>
+          <h5 class="card-title fw-bold">{{emblogic}}</h5>
           <p class="card-text">
             <ul>
-              <li><b>{{hp_dates}}</b></li>
-              <li><b>{{hp_role}}</b></li>
-              <li><b>{{hp_location}}</b></li>
+              <li><b>{{emblogic_dates}}</b></li>
+              <li><b>{{emblogic_role}}</b></li>
+              <li><b>{{emblogic_location}}</b></li>
             </ul>
           </p>
         </div>
@@ -123,19 +131,20 @@
 
     <div class="col">
       <div class="card" style="width: 18rem;">
-        <img src="/images/seasia_logo.jpeg" class="card-img-top" style="height: 140px;" alt="seasia_logo">
+        <img src="/images/ducat.jpg" class="card-img-top" style="height: 140px;" alt="ducat_logo">
         <div class="card-body">
-          <h5 class="card-title fw-bold">{{seasia}}</h5>
+          <h5 class="card-title fw-bold">{{ducat}}</h5>
          <p class="card-text">
             <ul>
-              <li><b>{{seasia_dates}}</b></li>
-              <li><b>{{seasia_role}}</b></li>
-              <li><b>{{seasia_location}}</b></li>
+              <li><b>{{ducat_dates}}</b></li>
+              <li><b>{{ducat_role}}</b></li>
+              <li><b>{{ducat_location}}</b></li>
             </ul>
           </p>
         </div>
       </div>
     </div>
+
   </div>
 </div>
 
@@ -147,16 +156,9 @@
       <div class="col">
         <div class="card">
           <div class="card-body">
-            <h5 class="card-title">{{vap}}</h5>
+            <h5 class="card-title">{{trinetra}}</h5>
             <p class="card-text">
-              <ul>
-                <li>{{vap_1}}
-                <li>{{vap_2}}
-                <li>{{vap_3}}
-                <li>{{vap_4}}
-                <li>{{vap_5}}
-                <li>{{vap_6}}
-              </ul>
+                   {{{trinetra_details}}}
               </p>
           </div>
         </div>
@@ -165,14 +167,9 @@
             <div class="col">
         <div class="card">
           <div class="card-body">
-            <h5 class="card-title">{{labm}}</h5>
+            <h5 class="card-title">{{ngucccloud}}</h5>
             <p class="card-text">
-              <ul>
-                <li>{{labm_1}}</li>
-                <li>{{labm_2}}</li>
-                <li>{{labm_3}}</li>
-                <li>{{labm_4}}</li>
-              </ul>
+              {{{nguccclouddetails}}}
               </p>
           </div>
         </div>
@@ -181,9 +178,9 @@
       <div class="col">
         <div class="card">
           <div class="card-body">
-            <h5 class="card-title">{{voy}}</h5>
+            <h5 class="card-title">{{ngucc2}}</h5>
             <p class="card-text">
-              {{{voy_details}}}
+              {{{ngucc2details}}}
             </p>
           </div>
         </div>
@@ -191,10 +188,10 @@
       <div class="col">
         <div class="card">
           <div class="card-body">
-            <h5 class="card-title">{{sapp}}</h5>
+            <h5 class="card-title">{{ticketing}}</h5>
             <p class="card-text">
               {{!-- Render html using triple moustaches --}}
-              {{{sapp_details}}}
+              {{{ticketingdetails}}}
             </p>
           </div>
         </div>
